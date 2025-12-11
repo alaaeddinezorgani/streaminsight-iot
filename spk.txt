@@ -1,0 +1,333 @@
+spark-job-1  | /usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+spark-job-1  | :: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+spark-job-1  | Ivy Default Cache set to: /root/.ivy2/cache
+spark-job-1  | The jars for the packages stored in: /root/.ivy2/jars
+spark-job-1  | org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+spark-job-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-42268991-7714-4d27-816a-2f0201a6ae48;1.0
+spark-job-1  | 	confs: [default]
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | :: resolution report :: resolve 430915ms :: artifacts dl 0ms
+spark-job-1  | 	:: modules in use:
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|                  |            modules            ||   artifacts   |
+spark-job-1  | 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 
+spark-job-1  | :: problems summary ::
+spark-job-1  | :::: WARNINGS
+spark-job-1  | 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 		module not found: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1
+spark-job-1  | 
+spark-job-1  | 	==== local-m2-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 	==== local-ivy-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.4.1/ivys/ivy.xml
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache.spark/spark-sql-kafka-0-10_2.12/3.4.1/jars/spark-sql-kafka-0-10_2.12.jar
+spark-job-1  | 
+spark-job-1  | 	==== central: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 	==== spark-packages: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		::          UNRESOLVED DEPENDENCIES         ::
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		:: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :::: ERRORS
+spark-job-1  | 	Server access error at url https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 	Server access error at url https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 	Server access error at url https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+spark-job-1  | Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found]
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1528)
+spark-job-1  | 	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:332)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:955)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:192)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:215)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1111)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1120)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+spark-job-1  | Traceback (most recent call last):
+spark-job-1  |   File "/app/spark_job.py", line 20, in <module>
+spark-job-1  |     .getOrCreate()
+spark-job-1  |      ^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+spark-job-1  |     sc = SparkContext.getOrCreate(sparkConf)
+spark-job-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 512, in getOrCreate
+spark-job-1  |     SparkContext(conf=conf or SparkConf())
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 198, in __init__
+spark-job-1  |     SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 432, in _ensure_initialized
+spark-job-1  |     SparkContext._gateway = gateway or launch_gateway(conf)
+spark-job-1  |                                        ^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+spark-job-1  |     raise RuntimeError("Java gateway process exited before sending its port number")
+spark-job-1  | RuntimeError: Java gateway process exited before sending its port number
+spark-job-1  | /usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+spark-job-1  | :: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+spark-job-1  | Ivy Default Cache set to: /root/.ivy2/cache
+spark-job-1  | The jars for the packages stored in: /root/.ivy2/jars
+spark-job-1  | org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+spark-job-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-9c669c60-ec28-47c6-a52d-bde9d55fb0d4;1.0
+spark-job-1  | 	confs: [default]
+spark-job-1  | :: resolution report :: resolve 297491ms :: artifacts dl 0ms
+spark-job-1  | 	:: modules in use:
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|                  |            modules            ||   artifacts   |
+spark-job-1  | 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 
+spark-job-1  | :: problems summary ::
+spark-job-1  | :::: WARNINGS
+spark-job-1  | 	io problem while parsing ivy file: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom (java.io.IOException: Impossible to load parent for file:/root/.ivy2/cache/org.apache.spark/spark-sql-kafka-0-10_2.12/ivy-3.4.1.xml.original. Parent=org.apache.spark#spark-parent_2.12;3.4.1)
+spark-job-1  | 
+spark-job-1  | 		module not found: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1
+spark-job-1  | 
+spark-job-1  | 	==== local-m2-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-parent_2.12;3.4.1!spark-parent_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 	==== local-ivy-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache.spark/spark-parent_2.12/3.4.1/ivys/ivy.xml
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-parent_2.12;3.4.1!spark-parent_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache.spark/spark-parent_2.12/3.4.1/jars/spark-parent_2.12.jar
+spark-job-1  | 
+spark-job-1  | 	==== central: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-parent_2.12;3.4.1!spark-parent_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 	==== spark-packages: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		::          UNRESOLVED DEPENDENCIES         ::
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		:: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :::: ERRORS
+spark-job-1  | 	Server access error at url https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 	Server access error at url https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.jar (java.net.SocketException: Network is unreachable)
+spark-job-1  | 
+spark-job-1  | 	Server access error at url https://repos.spark-packages.org/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+spark-job-1  | Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found]
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1528)
+spark-job-1  | 	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:332)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:955)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:192)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:215)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1111)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1120)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+spark-job-1  | Traceback (most recent call last):
+spark-job-1  |   File "/app/spark_job.py", line 20, in <module>
+spark-job-1  |     .getOrCreate()
+spark-job-1  |      ^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+spark-job-1  |     sc = SparkContext.getOrCreate(sparkConf)
+spark-job-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 512, in getOrCreate
+spark-job-1  |     SparkContext(conf=conf or SparkConf())
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 198, in __init__
+spark-job-1  |     SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 432, in _ensure_initialized
+spark-job-1  |     SparkContext._gateway = gateway or launch_gateway(conf)
+spark-job-1  |                                        ^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+spark-job-1  |     raise RuntimeError("Java gateway process exited before sending its port number")
+spark-job-1  | RuntimeError: Java gateway process exited before sending its port number
+spark-job-1  | /usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+spark-job-1  | :: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+spark-job-1  | Ivy Default Cache set to: /root/.ivy2/cache
+spark-job-1  | The jars for the packages stored in: /root/.ivy2/jars
+spark-job-1  | org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+spark-job-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-6458d6bd-76bb-4246-9f9c-35c7e6a4b8f6;1.0
+spark-job-1  | 	confs: [default]
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | You probably access the destination server through a proxy server that is not well configured.
+spark-job-1  | :: resolution report :: resolve 159278ms :: artifacts dl 0ms
+spark-job-1  | 	:: modules in use:
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|                  |            modules            ||   artifacts   |
+spark-job-1  | 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|      default     |   1   |   0   |   0   |   0   ||   0   |   0   |
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 
+spark-job-1  | :: problems summary ::
+spark-job-1  | :::: WARNINGS
+spark-job-1  | 	Host repo1.maven.org not found. url=https://repo1.maven.org/maven2/org/apache/apache/18/apache-18.jar
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/apache/18/apache-18.pom
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/apache/18/apache-18.jar
+spark-job-1  | 
+spark-job-1  | 	io problem while parsing ivy file: https://repo1.maven.org/maven2/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom (java.io.IOException: Impossible to load parent for file:/root/.ivy2/cache/org.apache.spark/spark-parent_2.12/ivy-3.4.1.xml.original. Parent=org.apache#apache;18)
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-parent_2.12/3.4.1/spark-parent_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 	io problem while parsing ivy file: https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom (java.io.IOException: Impossible to load parent for file:/root/.ivy2/cache/org.apache.spark/spark-sql-kafka-0-10_2.12/ivy-3.4.1.xml.original. Parent=org.apache.spark#spark-parent_2.12;3.4.1)
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	Host repos.spark-packages.org not found. url=https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 		module not found: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1
+spark-job-1  | 
+spark-job-1  | 	==== local-m2-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/apache/18/apache-18.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache#apache;18!apache.jar:
+spark-job-1  | 
+spark-job-1  | 	  file:/root/.m2/repository/org/apache/apache/18/apache-18.jar
+spark-job-1  | 
+spark-job-1  | 	==== local-ivy-cache: tried
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache/apache/18/ivys/ivy.xml
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache#apache;18!apache.jar:
+spark-job-1  | 
+spark-job-1  | 	  /root/.ivy2/local/org.apache/apache/18/jars/apache.jar
+spark-job-1  | 
+spark-job-1  | 	==== central: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/apache/18/apache-18.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache#apache;18!apache.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repo1.maven.org/maven2/org/apache/apache/18/apache-18.jar
+spark-job-1  | 
+spark-job-1  | 	==== spark-packages: tried
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.pom
+spark-job-1  | 
+spark-job-1  | 	  -- artifact org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar:
+spark-job-1  | 
+spark-job-1  | 	  https://repos.spark-packages.org/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		::          UNRESOLVED DEPENDENCIES         ::
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 		:: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found
+spark-job-1  | 
+spark-job-1  | 		::::::::::::::::::::::::::::::::::::::::::::::
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :::: ERRORS
+spark-job-1  | 	Server access error at url https://repo1.maven.org/maven2/org/apache/apache/18/apache-18.pom (java.net.ConnectException: Connection timed out)
+spark-job-1  | 
+spark-job-1  | 
+spark-job-1  | :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+spark-job-1  | Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1: not found]
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1528)
+spark-job-1  | 	at org.apache.spark.util.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:185)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:332)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:955)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:192)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:215)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:91)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1111)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1120)
+spark-job-1  | 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+spark-job-1  | Traceback (most recent call last):
+spark-job-1  |   File "/app/spark_job.py", line 20, in <module>
+spark-job-1  |     .getOrCreate()
+spark-job-1  |      ^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+spark-job-1  |     sc = SparkContext.getOrCreate(sparkConf)
+spark-job-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 512, in getOrCreate
+spark-job-1  |     SparkContext(conf=conf or SparkConf())
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 198, in __init__
+spark-job-1  |     SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 432, in _ensure_initialized
+spark-job-1  |     SparkContext._gateway = gateway or launch_gateway(conf)
+spark-job-1  |                                        ^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/java_gateway.py", line 106, in launch_gateway
+spark-job-1  |     raise RuntimeError("Java gateway process exited before sending its port number")
+spark-job-1  | RuntimeError: Java gateway process exited before sending its port number
+spark-job-1  | /usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+spark-job-1  | :: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+spark-job-1  | Ivy Default Cache set to: /root/.ivy2/cache
+spark-job-1  | The jars for the packages stored in: /root/.ivy2/jars
+spark-job-1  | org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+spark-job-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-d4d4804d-3c08-43d0-814c-ecb70320bd99;1.0
+spark-job-1  | 	confs: [default]

@@ -1,0 +1,125 @@
+spark-job-1  | /usr/local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+spark-job-1  | :: loading settings :: url = jar:file:/usr/local/lib/python3.11/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+spark-job-1  | Ivy Default Cache set to: /root/.ivy2/cache
+spark-job-1  | The jars for the packages stored in: /root/.ivy2/jars
+spark-job-1  | org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+spark-job-1  | :: resolving dependencies :: org.apache.spark#spark-submit-parent-076b5817-5e56-4e8d-b424-86b64f551a1d;1.0
+spark-job-1  | 	confs: [default]
+spark-job-1  | 	found org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 in central
+spark-job-1  | 	found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 in central
+spark-job-1  | 	found org.apache.kafka#kafka-clients;3.3.2 in central
+spark-job-1  | 	found org.lz4#lz4-java;1.8.0 in central
+spark-job-1  | 	found org.xerial.snappy#snappy-java;1.1.10.1 in central
+spark-job-1  | 	found org.slf4j#slf4j-api;2.0.6 in central
+spark-job-1  | 	found org.apache.hadoop#hadoop-client-runtime;3.3.4 in central
+spark-job-1  | 	found org.apache.hadoop#hadoop-client-api;3.3.4 in central
+spark-job-1  | 	found commons-logging#commons-logging;1.1.3 in central
+spark-job-1  | 	found com.google.code.findbugs#jsr305;3.0.0 in central
+spark-job-1  | 	found org.apache.commons#commons-pool2;2.11.1 in central
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.4.1/spark-sql-kafka-0-10_2.12-3.4.1.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1!spark-sql-kafka-0-10_2.12.jar (1019ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.4.1/spark-token-provider-kafka-0-10_2.12-3.4.1.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1!spark-token-provider-kafka-0-10_2.12.jar (218ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.3.2/kafka-clients-3.3.2.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.kafka#kafka-clients;3.3.2!kafka-clients.jar (13444ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar ...
+spark-job-1  | 	[SUCCESSFUL ] com.google.code.findbugs#jsr305;3.0.0!jsr305.jar (244ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.commons#commons-pool2;2.11.1!commons-pool2.jar (951ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-runtime/3.3.4/hadoop-client-runtime-3.3.4.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-runtime;3.3.4!hadoop-client-runtime.jar (31182ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.lz4#lz4-java;1.8.0!lz4-java.jar (612ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/xerial/snappy/snappy-java/1.1.10.1/snappy-java-1.1.10.1.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.xerial.snappy#snappy-java;1.1.10.1!snappy-java.jar(bundle) (1219ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.slf4j#slf4j-api;2.0.6!slf4j-api.jar (198ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/org/apache/hadoop/hadoop-client-api/3.3.4/hadoop-client-api-3.3.4.jar ...
+spark-job-1  | 	[SUCCESSFUL ] org.apache.hadoop#hadoop-client-api;3.3.4!hadoop-client-api.jar (16168ms)
+spark-job-1  | downloading https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar ...
+spark-job-1  | 	[SUCCESSFUL ] commons-logging#commons-logging;1.1.3!commons-logging.jar (141ms)
+spark-job-1  | :: resolution report :: resolve 37767ms :: artifacts dl 65423ms
+spark-job-1  | 	:: modules in use:
+spark-job-1  | 	com.google.code.findbugs#jsr305;3.0.0 from central in [default]
+spark-job-1  | 	commons-logging#commons-logging;1.1.3 from central in [default]
+spark-job-1  | 	org.apache.commons#commons-pool2;2.11.1 from central in [default]
+spark-job-1  | 	org.apache.hadoop#hadoop-client-api;3.3.4 from central in [default]
+spark-job-1  | 	org.apache.hadoop#hadoop-client-runtime;3.3.4 from central in [default]
+spark-job-1  | 	org.apache.kafka#kafka-clients;3.3.2 from central in [default]
+spark-job-1  | 	org.apache.spark#spark-sql-kafka-0-10_2.12;3.4.1 from central in [default]
+spark-job-1  | 	org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.4.1 from central in [default]
+spark-job-1  | 	org.lz4#lz4-java;1.8.0 from central in [default]
+spark-job-1  | 	org.slf4j#slf4j-api;2.0.6 from central in [default]
+spark-job-1  | 	org.xerial.snappy#snappy-java;1.1.10.1 from central in [default]
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|                  |            modules            ||   artifacts   |
+spark-job-1  | 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | 	|      default     |   11  |   11  |   11  |   0   ||   11  |   11  |
+spark-job-1  | 	---------------------------------------------------------------------
+spark-job-1  | :: retrieving :: org.apache.spark#spark-submit-parent-076b5817-5e56-4e8d-b424-86b64f551a1d
+spark-job-1  | 	confs: [default]
+spark-job-1  | 	11 artifacts copied, 0 already retrieved (56445kB/66ms)
+spark-job-1  | 25/12/08 21:28:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+spark-job-1  | Setting default log level to "WARN".
+spark-job-1  | To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+spark-job-1  | Traceback (most recent call last):
+spark-job-1  |   File "/app/spark_job.py", line 20, in <module>
+spark-job-1  |     .getOrCreate()
+spark-job-1  |      ^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/sql/session.py", line 477, in getOrCreate
+spark-job-1  |     sc = SparkContext.getOrCreate(sparkConf)
+spark-job-1  |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 512, in getOrCreate
+spark-job-1  |     SparkContext(conf=conf or SparkConf())
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 200, in __init__
+spark-job-1  |     self._do_init(
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 287, in _do_init
+spark-job-1  |     self._jsc = jsc or self._initialize_context(self._conf._jconf)
+spark-job-1  |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/pyspark/context.py", line 417, in _initialize_context
+spark-job-1  |     return self._jvm.JavaSparkContext(jconf)
+spark-job-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1587, in __call__
+spark-job-1  |     return_value = get_return_value(
+spark-job-1  |                    ^^^^^^^^^^^^^^^^^
+spark-job-1  |   File "/usr/local/lib/python3.11/site-packages/py4j/protocol.py", line 326, in get_return_value
+spark-job-1  |     raise Py4JJavaError(
+spark-job-1  | py4j.protocol.Py4JJavaError: An error occurred while calling None.org.apache.spark.api.java.JavaSparkContext.
+spark-job-1  | : java.lang.ExceptionInInitializerError
+spark-job-1  | 	at org.apache.spark.unsafe.array.ByteArrayMethods.<clinit>(ByteArrayMethods.java:52)
+spark-job-1  | 	at org.apache.spark.memory.MemoryManager.defaultPageSizeBytes$lzycompute(MemoryManager.scala:261)
+spark-job-1  | 	at org.apache.spark.memory.MemoryManager.defaultPageSizeBytes(MemoryManager.scala:251)
+spark-job-1  | 	at org.apache.spark.memory.MemoryManager.$anonfun$pageSizeBytes$1(MemoryManager.scala:270)
+spark-job-1  | 	at scala.runtime.java8.JFunction0$mcJ$sp.apply(JFunction0$mcJ$sp.java:23)
+spark-job-1  | 	at scala.Option.getOrElse(Option.scala:189)
+spark-job-1  | 	at org.apache.spark.memory.MemoryManager.<init>(MemoryManager.scala:270)
+spark-job-1  | 	at org.apache.spark.memory.UnifiedMemoryManager.<init>(UnifiedMemoryManager.scala:58)
+spark-job-1  | 	at org.apache.spark.memory.UnifiedMemoryManager$.apply(UnifiedMemoryManager.scala:207)
+spark-job-1  | 	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:325)
+spark-job-1  | 	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:196)
+spark-job-1  | 	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:279)
+spark-job-1  | 	at org.apache.spark.SparkContext.<init>(SparkContext.scala:464)
+spark-job-1  | 	at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:58)
+spark-job-1  | 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+spark-job-1  | 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:75)
+spark-job-1  | 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:53)
+spark-job-1  | 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+spark-job-1  | 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+spark-job-1  | 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:247)
+spark-job-1  | 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:374)
+spark-job-1  | 	at py4j.Gateway.invoke(Gateway.java:238)
+spark-job-1  | 	at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:80)
+spark-job-1  | 	at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:69)
+spark-job-1  | 	at py4j.ClientServerConnection.waitForCommands(ClientServerConnection.java:182)
+spark-job-1  | 	at py4j.ClientServerConnection.run(ClientServerConnection.java:106)
+spark-job-1  | 	at java.base/java.lang.Thread.run(Thread.java:1583)
+spark-job-1  | Caused by: java.lang.IllegalStateException: java.lang.NoSuchMethodException: java.nio.DirectByteBuffer.<init>(long,int)
+spark-job-1  | 	at org.apache.spark.unsafe.Platform.<clinit>(Platform.java:113)
+spark-job-1  | 	... 27 more
+spark-job-1  | Caused by: java.lang.NoSuchMethodException: java.nio.DirectByteBuffer.<init>(long,int)
+spark-job-1  | 	at java.base/java.lang.Class.getConstructor0(Class.java:3763)
+spark-job-1  | 	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:2932)
+spark-job-1  | 	at org.apache.spark.unsafe.Platform.<clinit>(Platform.java:71)
+spark-job-1  | 	... 27 more
+spark-job-1  | 

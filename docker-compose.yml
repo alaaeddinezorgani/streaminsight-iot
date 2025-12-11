@@ -1,0 +1,94 @@
+version: "3.8"
+
+services:
+  redpanda:
+    image: docker.io/redpandadata/redpanda:latest
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp=1
+      - --memory=512M
+      - --reserve-memory=0M
+      - --node-id=0
+      - --check=false
+      - --kafka-addr=PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr=PLAINTEXT://redpanda:9092
+    ports:
+      - "9092:9092"
+    volumes:
+      - redpanda_data:/var/lib/redpanda
+
+  influxdb:
+    image: influxdb:2.7.5
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=adminpass
+      - DOCKER_INFLUXDB_INIT_ORG=streaminsight
+      - DOCKER_INFLUXDB_INIT_BUCKET=iot_bucket
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=admin-token
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+
+  grafana:
+    image: grafana/grafana:9.5.12
+    depends_on:
+      - influxdb
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    restart: unless-stopped
+
+  producer:
+    build:
+      context: ./producer
+      dockerfile: Dockerfile
+    depends_on:
+      - redpanda
+    environment:
+      - KAFKA_BROKER=redpanda:9092
+      - TOPIC=iot-data
+    deploy:
+      resources:
+        limits:
+          memory: 400M
+ 
+  spark-job:
+    build:
+      context: ./spark-job
+      dockerfile: Dockerfile
+    depends_on:
+      - redpanda
+      - influxdb
+    environment:
+      KAFKA_BROKER: redpanda:9092
+      INFLUX_URL: http://influxdb:8086
+      INFLUX_ORG: streaminsight
+      INFLUX_BUCKET: iot_bucket
+      INFLUX_TOKEN: admin-token
+      PYSPARK_SUBMIT_ARGS: "--jars /opt/spark/jars/* pyspark-shell"
+    volumes:
+      - ./jars:/opt/spark/jars
+      - ./spark-job/spark_test.py:/app/spark_test.py
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+
+volumes:
+  redpanda_data:
+  influxdb_data:
+

@@ -5,7 +5,7 @@ Prereqs:
 - 8GB RAM (recommended)
 
 1. Build & start services
-   docker compose up --build -d
+   `docker compose up --build -d`
 
 2. Vérifier :
    - Redpanda Kafka: localhost:9092 (utilise rpk/kafka clients)
@@ -13,11 +13,11 @@ Prereqs:
    - Grafana: http://localhost:3000 (admin/admin)
 
 3. Logs:
-   docker compose logs -f producer
-   docker compose logs -f spark-job
+   `docker compose logs -f producer`
+   `docker compose logs -f spark-job`
 
 4. Stop:
-   docker compose down -v
+   `docker compose down -v`
 
 Notes:
 - Si le spark-job plante parce que `spark-sql-kafka` ne se télécharge pas, relancer `docker compose up --build spark-job`.

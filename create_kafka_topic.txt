@@ -1,0 +1,1 @@
+docker compose exec redpanda rpk topic create iot-data --partitions 1 --replicas 1

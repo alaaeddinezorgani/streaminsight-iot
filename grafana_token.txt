@@ -1,0 +1,10 @@
+
+sudo docker compose exec influxdb bash
+
+
+influx auth create \
+  -t admin-token \
+  -o streaminsight \
+  -d "grafana-token" \
+  --read-bucket 05a241dd29abeac8
+

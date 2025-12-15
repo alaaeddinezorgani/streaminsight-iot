@@ -1,0 +1,2 @@
+{"device_id": "dev1", "device_type": "sensor", "timestamp": 1700000000, "value": 42.0}
+{"device_id": "dev2", "device_type": "sensor", "timestamp": 1700000050, "value": 23.5}

@@ -7,8 +7,8 @@ services:
       - redpanda
       - start
       - --overprovisioned
-      - --smp=1
-      - --memory=512M
+      - --smp=2
+      - --memory=1G
       - --reserve-memory=0M
       - --node-id=0
       - --check=false
@@ -61,10 +61,7 @@ services:
     environment:
       - KAFKA_BROKER=redpanda:9092
       - TOPIC=iot-data
-    deploy:
-      resources:
-        limits:
-          memory: 400M
+    restart: unless-stopped
  
   spark-job:
     build:

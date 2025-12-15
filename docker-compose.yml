@@ -78,8 +78,7 @@ services:
       INFLUX_URL: http://influxdb:8086
       INFLUX_ORG: streaminsight
       INFLUX_BUCKET: iot_bucket
-      INFLUX_TOKEN: admin-token
-      PYSPARK_SUBMIT_ARGS: "--jars /opt/spark/jars/* pyspark-shell"
+      INFLUX_TOKEN: admin-token 
     volumes:
       - ./jars:/opt/spark/jars
       - ./spark-job/spark_test.py:/app/spark_test.py

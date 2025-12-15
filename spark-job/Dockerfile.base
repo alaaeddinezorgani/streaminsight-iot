@@ -1,0 +1,27 @@
+FROM python:3.11-slim
+
+# System deps
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    tar \
+    ca-certificates \
+    procps \
+ && rm -rf /var/lib/apt/lists/*
+
+# Java (local tar, no download)
+COPY amazon-corretto-17-x64-linux-jdk.tar.gz /tmp/
+
+RUN mkdir -p /opt/java \
+ && tar -xzf /tmp/amazon-corretto-17-x64-linux-jdk.tar.gz -C /opt/java \
+ && rm /tmp/amazon-corretto-17-x64-linux-jdk.tar.gz \
+ && ln -s /opt/java/* /opt/java/current
+
+ENV JAVA_HOME=/opt/java/current
+ENV PATH="$JAVA_HOME/bin:$PATH"
+
+# Python deps (HEAVY)
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# Spark expects this
+ENV SPARK_HOME=/usr/local/lib/python3.11/site-packages/pyspark
+ENV PATH="$SPARK_HOME/bin:$PATH"

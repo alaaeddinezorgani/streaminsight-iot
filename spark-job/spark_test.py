@@ -6,7 +6,7 @@ from pyspark.sql.types import StructType, StringType, DoubleType, LongType
 INFLUX_URL = "http://influxdb:8086"
 INFLUX_TOKEN = "admin-token"
 INFLUX_BUCKET = "iot_bucket"
-INFLUX_ORG = "a8d94056bfd01a27"
+INFLUX_ORG = "streaminsight"
 
 # Kafka settings
 KAFKA_BROKER = "redpanda:9092"

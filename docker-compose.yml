@@ -18,6 +18,28 @@ services:
       - "9092:9092"
     volumes:
       - redpanda_data:/var/lib/redpanda
+    healthcheck:
+      test: ["CMD", "rpk", "cluster", "info", "--brokers", "localhost:9092"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redpanda-init:
+    image: docker.io/redpandadata/redpanda:latest
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c"]
+    command: |
+      echo "Waiting briefly for Redpanda metadata..."
+      sleep 2
+      echo "Creating Kafka topic iot-data (if not exists)..."
+      rpk topic create iot-data \
+        --brokers redpanda:9092 \
+        --partitions 1 \
+        --replicas 1 || true
+      echo "Redpanda init done."
+
 
   influxdb:
     image: influxdb:2.7.5
@@ -32,12 +54,25 @@ services:
       - "8086:8086"
     volumes:
       - influxdb_data:/var/lib/influxdb2
+      - ./influx-secrets:/influx-secrets
+      - ./scripts:/scripts
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
       interval: 10s
       timeout: 5s
       retries: 6
-
+     
+  influxdb-init:
+    image: influxdb:2.7.5
+    depends_on:
+      influxdb:
+        condition: service_healthy
+    entrypoint: ["/bin/sh", "-c"]
+    command: "/scripts/create-grafana-token.sh"
+    volumes:
+      - ./influx-secrets:/influx-secrets
+      - ./scripts:/scripts
+  
   grafana:
     image: grafana/grafana:9.5.12
     depends_on:

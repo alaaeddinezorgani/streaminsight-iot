@@ -1,0 +1,8 @@
+FROM influxdb:2.7.5
+
+# Copy jq binary into /usr/local/bin
+COPY ./scripts/bin/jq /usr/local/bin/jq
+RUN chmod +x /usr/local/bin/jq
+
+# Switch back to influxdb user
+USER influxdb

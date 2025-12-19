@@ -1,0 +1,5 @@
+ sudo docker compose exec redpanda \
+∙ rpk topic consume iot-data \
+∙ --offset end \
+∙ --num 5
+

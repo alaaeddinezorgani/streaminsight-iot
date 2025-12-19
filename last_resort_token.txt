@@ -1,6 +1,6 @@
 sudo docker compose exec influxdb bash
 
-influx bucket list -o streaminsight
+influx bucket list -o streaminsight -t admin-token
 
 
 influx auth create \
@@ -13,3 +13,5 @@ influx auth create \
 example:
 influx auth create     -o streaminsight     -t admin-token     -d grafana-token     --read-bucket ceeba7f063cc324c
 
+
+influx auth list -o streaminsight

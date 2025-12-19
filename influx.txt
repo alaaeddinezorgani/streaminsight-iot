@@ -1,0 +1,8 @@
+-t -o
+from(bucket: "iot_bucket")
+  |> range(start: -2h)
+
+influx bucket list -o streaminsight -t admin-token
+
+influx auth create     -o streaminsight     -t admin-token     -d grafana-token     --read-bucket f6381b6aafab7778
+
